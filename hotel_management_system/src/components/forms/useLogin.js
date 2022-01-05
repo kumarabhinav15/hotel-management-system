@@ -30,16 +30,15 @@ const useLogin = (callback, validate) => {
         const results = res.data;
         console.log(res.data);
         if (
-          results[0]["email"] === values.email &&
-          results[0]["password"] === values.password
+          results["user"]["email"] === values.email &&
+          results["user"]["password"] === values.password
         ) {
           callback();
+          localStorage.setItem("login", results["user"]["id"]);
         } else {
           alert("wrong email/password");
+          console.log(results);
         }
-
-        console.log(res);
-        console.log("success");
       })
       .catch((err) => {
         console.log(err);

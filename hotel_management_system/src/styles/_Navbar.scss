@@ -88,6 +88,17 @@
 .menu-icon {
   display: none;
 }
+.user-icon {
+  font-size: 25px;
+}
+.dashboard-icon {
+  color: #fff;
+  width: 100px;
+
+  &:hover {
+    color: #8f0e39;
+  }
+}
 
 @media screen and (max-width: 960px) {
   .fas-caret-down {
@@ -174,7 +185,16 @@
     transition: 250ms;
   }
 
-  button {
-    display: none;
+  .dashboard-icon {
+    position: fixed;
+    top: 29px;
+    right: 80px;
+    text-decoration: none;
+    color: #fff;
+  }
+  .navbar {
+    button {
+      display: none;
+    }
   }
 }

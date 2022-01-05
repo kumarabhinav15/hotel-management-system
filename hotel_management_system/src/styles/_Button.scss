@@ -1,7 +1,6 @@
 .btn {
   padding: 4px 14px;
   font-size: 20px;
-  transition: all 0.3s ease-out;
   background-color: transparent;
   color: #dd4a7b;
   border-radius: 2px;
@@ -11,6 +10,7 @@
   border-width: 2px 0px 2px 0px;
   height: 45px;
   width: 100px;
+  transition: all 0.4s ease-in-out;
 }
 
 .btn:hover {

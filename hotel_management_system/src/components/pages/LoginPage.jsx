@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../Footer";
-import Hero from "../Hero";
 import Navbar from "../Navbar";
-import RoomsContent from "../RoomsContent";
-import AboutUs from "./AboutUs";
+import Login from "./Login";
 
-function Home() {
+function LoginPage() {
   const [loggedIn, setLoggedIn] = useState(false);
   useEffect(() => {
     let data = localStorage.getItem("login");
@@ -19,14 +17,10 @@ function Home() {
   return (
     <>
       <Navbar loggedIn={loggedIn} setLogValue={loggedout} />
-      <Hero imgaddress="/images/hero-img.jpg" />
-      <main className="container">
-        <AboutUs />
-        <RoomsContent />
-      </main>
+      <Login />
       <Footer />
     </>
   );
 }
 
-export default Home;
+export default LoginPage;
